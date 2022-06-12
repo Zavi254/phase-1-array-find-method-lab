@@ -63,18 +63,16 @@ const record = [
 
 
 function superbowlWin(array){
-    const result = array.find(function finalResult(item){
-        for(let item of array){
-            if(result === true){
-                return result.year
-            }
-            else{
-                return undefined;
-            }
-        }
-    });
-    
-} 
+    const user = array.find(item => item.result === "W");
+    if(user){
+        return user.year
+    }
+    else{
+        return undefined
+    }
+}
+
+superbowlWin(record)
 
 
 
